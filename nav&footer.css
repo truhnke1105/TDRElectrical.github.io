@@ -1,0 +1,322 @@
+html {
+	background-color: rgba(0,0,0,0);
+}
+
+body {
+	margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Styles for the header section */
+.header {
+    padding: 5px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Roboto Mono", sans-serif;
+    text-transform: uppercase;
+}
+
+/* Styles for the contact info */
+.header .contact-info {
+    margin: 10px 50px;
+    text-align: left;
+    flex: 1;
+    opacity: 60%;
+}
+
+.header .contact-info p {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+/* Styles for the location time */
+.header .location-time {
+    margin: 10px 50px;
+    text-align: right;
+    flex: 1;
+    opacity: 60%;
+}
+
+.header .location-time p {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+/* Styles for the logo image (centered) */
+.logo {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.logo img {
+    height: auto;
+    max-width: 15%;
+	padding-bottom: 5%;
+}
+
+/* Styles for the navigation container */
+header nav {
+	position: absolute;
+    background-color: #1a2534;
+    width: 60%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 10);
+    text-align: center;
+    font-family: "Roboto Mono", sans-serif;
+    text-transform: uppercase;
+	top: 45%;
+	left: 0;
+	right: 0;
+	z-index: 2;
+}
+
+.nav-box {
+    border: 1px solid #e0e0e0; /* Add a light gray border */
+    margin: 0 10px; /* Adjust margins as needed */
+    padding: 10px; /* Add some padding */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0
+}
+
+.nav-links li {
+    margin-right: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Styles for the navigation links */
+nav ul.nav-links {
+	text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	padding: 0 50px;
+	transition: color 0.5s;
+}
+
+/* Styles for the navigation links */
+nav ul.nav-links a {
+    text-decoration: none;
+    color: #f2f2f2;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative; /* Position relative for pseudo-element positioning */
+    transition: color 0.3s; /* Add transition for smooth color change */
+}
+
+/* Create the diamond-shaped popup using a pseudo-element */
+nav ul.nav-links a::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%); /* Center the pseudo-element */
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 7px; /* Adjust the size of the diamond */
+    border-color: transparent transparent #ff9900 transparent; /* Adjust the colors */
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s; /* Add transition for smooth appearance */
+}
+
+nav ul.nav-links a:hover {
+    color: #ff9900; /* Adjust to your desired hover color */
+}
+
+/* Show the diamond-shaped popup on hover */
+nav ul.nav-links a:hover::before {
+    opacity: .5;
+    transform: translateX(-50%) translateY(5px); /* Adjust the vertical position */
+}
+
+
+nav ul.nav-links li {
+    margin: 0 20px;
+    padding: 0 10px;
+}
+
+nav ul.nav-links a {
+    text-decoration: none;
+    color: #f2f2f2;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Styles for the search form container */
+.search-form-container {
+    display: none;
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 85%;
+    background-color: #1a2534;
+    padding: 10px 0;
+    z-index: 1; /* Place it above the navigation bar */
+}
+
+.search-form {
+    text-align: center;
+}
+
+.search-form input {
+    width: 70%;
+    padding: 25px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+}
+
+.search-form button {
+    background-color: #fff;
+    color: #1a2534;
+    border: none;
+    padding: 5px 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Add transition for smooth visibility */
+.search-form-container, .search-form {
+    transition: all 0.3s;
+}
+
+/* Styles for the search icon */
+.search-icon {
+    cursor: pointer;
+	color: #fff;
+}
+
+#home {
+	font-size: 28px;
+}
+
+.spacer_image_1 {
+	height: 65vh;
+	width: 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	display: flex;
+	position: relative;
+	filter: brightness(75%);
+	flex-direction: column;
+	color: white;
+	font-family: "Noticia Text",serif;
+}
+
+.image_header_1 {
+	padding-top: 10%;
+	padding-left: 10%;
+	margin-bottom: -2%;
+	font-size: 450%;
+}
+
+.under_header_text {
+	padding-left: 10%;
+	font-size: 150%;
+}
+
+footer {
+	width: 100%;
+	postion: absolute;
+	padding: 75px 0;
+	background-color: #1a2534;
+	display: flex;
+	justify-content: space-around;
+	text-transform: uppercase;
+	font-family: "Roboto Mono",sans-serif;
+}
+
+.foot_head {
+	font-weight: 200;
+	font-size: 100%;
+	margin-left: 15%;
+	color: white;
+	border-bottom: solid 10%;
+	text-align: center;
+	width: 75%;
+}
+
+.footer_und {
+	color: white;
+	font-size: 75%;
+	font-weight: 200;
+	text-align: center;
+	text-decoration: none;
+}
+
+.back-to-top {
+	display: none;
+	position: fixed;
+    bottom: 60px;
+    right: 60px;
+    z-index: 100;
+    border: 2px solid #b3c875;
+    background-color: transparent;
+    color: #b3c875;
+    padding: 0;
+    height: 60px;
+    width: 60px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.back-to-top:hover {
+    background-color: transparent; /* Darker color on hover */
+}
+
+@media (min-width: 1800px) {
+	header nav {
+		top: 40%;
+	}
+	
+	.logo img {
+		height: auto;
+		max-width: 15%;
+		padding-bottom: 6%;
+	}
+}
+
+/* Media query for larger screens */
+@media (min-width: 1201px) {
+    header nav {
+        width: 80%; /* Adjust the width for larger screens */
+    }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .header .contact-info,
+    .header .location-time {
+        flex: 0;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    header nav {
+        width: 40%;
+    }
+}
+

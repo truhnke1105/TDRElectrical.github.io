@@ -1,0 +1,40 @@
+.all_our_services {
+	display: flex;
+	font-family: "Noticia Text",serif;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 5% 15%;
+	justify-content: center;
+}
+
+.all_our_services div {
+	padding: 2% 2.5%;
+}
+
+.service_pic { 
+	height: 50vh;
+}
+
+.electric_wiring_service { 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.electric_repair_service { 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.indust_install_service { 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.electric_panel_service { 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

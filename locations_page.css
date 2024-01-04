@@ -1,0 +1,22 @@
+.location_main_section { 
+	padding: 5% 10%;
+}
+
+.main_section { 
+	float: left;
+}
+
+.makes_us_local { 
+	width: 50%;
+}
+
+.makes_us_local h1 {
+	font-size: 60px;
+	font-family: "Teko",sans-serif;
+	font-weight: 300;
+}
+
+.makes_us_local p {
+	font-size: 20px;
+	padding-bottom: 5%;
+}

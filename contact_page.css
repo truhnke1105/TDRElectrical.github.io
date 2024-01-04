@@ -1,0 +1,131 @@
+.contact_form_split {
+	font-family: "Roboto Mono",sans-serif;
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 300px;
+}
+
+.contact-form {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+}
+
+.contact-form h2 {
+	font-size: 46px;
+	font-family: "Teko",sans-serif;
+	font-weight: 300;
+}
+
+.contact-form legend {
+	font-size: 13px;
+	color: #999999;
+	padding: 20px 0;
+}
+
+.contact-form .form-group {
+    flex-basis: 100%; /* Ensure each form group takes 100% width */
+    display: flex;
+    flex-direction: column; /* Place label and input vertically */
+    margin: 5px 0;
+}
+
+/* Add this CSS for checkbox styling */
+.contact-form label {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+/* Style the custom checkbox with checkmark */
+.contact-form label {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.contact-form input[type="checkbox"] {
+    display: none; /* Hide the default checkbox input */
+}
+
+.contact-form input[type="checkbox"] + label::before {
+    content: "";
+    display: inline-block;
+    width: 20px; /* Adjust the width as needed */
+    height: 20px; /* Adjust the height as needed */
+    background-color: trasnparent;
+    border: 1px solid #ccc;
+    margin-right: 10px; /* Adjust the margin as needed */
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+/* Add the checkmark when the checkbox is checked */
+.contact-form input[type="checkbox"]:checked + label::before {
+    content: "\2713"; /* Unicode checkmark character */
+    font-size: 16px; /* Adjust the size as needed */
+    color: white; /* Color of the checkmark */
+    text-align: center;
+    background-color: #007BFF; /* Background color when checked */
+    border: 1px solid #007BFF; /* Border color when checked */
+}
+
+
+.contact-form input,
+.contact-form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.contact-form .form-group:last-child {
+    margin-bottom: 0; /* Remove extra margin from the last form group */
+}
+
+.contact_and_pic {
+    flex: 1;
+    padding: 10px;
+    background-color: white;
+    align-items: center;
+	height: auto;
+	font-family: "Noticia Text",serif;
+	line-height: 1.875;
+}
+
+.contact_and_pic h3 {
+    font-size: 36px;
+	font-family: "Teko",sans-serif;
+	font-weight: 300;
+	line-height: 0;
+}
+
+.contact_and_pic p {
+    font-size: 16px;
+}
+
+.contact_and_pic img {
+    width: 70%;
+    height: auto;
+	padding: 2% 0;
+}
+
+.contact_box {
+    background: #51aebd;
+    color: #eeeeee;
+    text-align: center;
+    padding: 5% 10%;
+	width: 50%
+}

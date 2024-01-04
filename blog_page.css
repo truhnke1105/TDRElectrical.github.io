@@ -1,0 +1,49 @@
+.blog-content {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 5%;
+}
+
+.blog-post {
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.image-link {
+   display: inline-block;
+   overflow: hidden;
+   width: auto; /* Allow the width to adjust */
+   height: 150px; /* Set your desired height */
+}
+
+.image-link img {
+   width: 100%; /* Ensure the image width covers the container's width */
+   height: auto; /* Allow the height to adjust to maintain aspect ratio */
+   transition: transform 0.3s;
+}
+
+.image-link:hover img {
+   transform: scale(1.1); /* Adjust the zoom level as needed */
+}
+
+.blog-post h2 {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.blog-post p {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.post-date {
+    font-style: italic;
+    color: #777;
+}
+
+.post-text {
+    font-size: 16px;
+    line-height: 1.6;
+}

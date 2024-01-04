@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>TDR Electrical</title>
+		<link rel="stylesheet" type="text/css" href="nav&footer.css">
+		<link rel="stylesheet" type="text/css" href="locations_page.css">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+		<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Teko:100,200,300,400,500,600,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Noticia+Text:400,400i,700,700i" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	</head>
+
+	<body>
+		<div class="modal"></div>
+		<div class="header">
+			<div class="contact-info">
+				<p class="call_us">Call us today at 816-689-0770</p>
+			</div>
+			<div class="location-time">
+				<p>St. Joseph, MO | Mon - Fri: 7AM - 5:30PM</p>
+			</div>
+		</div>
+		<div class="logo">
+			<img src="Back&logo/TDR Logo.png" alt="TDR Electrical">
+		</div>
+		<header>
+			<nav>
+				<div class = "nav-box" id = "home-box">
+					<ul class="nav-links">
+						<li>
+							<a href="main.html" onclick="location.reload();" id="home">
+								<i class="fa fa-home fa-fw"></i>
+							</a>
+						</li>
+						<li><a href="about.html">About</a></li>
+						<li><a href = "services_page.html">Services</a></li>
+						<li><a javascript:void(0); onclick="location.reload();" style = "cursor: pointer;">Locations</a></li>
+						<li><a href="gallery_page.html">Gallery</a></li>
+						<li><a href="contact_page.html">Contact</a></li>
+						<li><a href="blog_page.html">Blog</a></li>
+						<li class="search-icon" id="search-icon">
+							<a>
+								<i class="fa fa-search"></i>
+							</a>
+						</li>
+						<li class="search-form-container" id="search-form-container">
+							<a>
+								<form class="search-form">
+									<input type="text" placeholder="Search...">
+									<button type="submit">Search</button>
+								</form>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		
+		<div class="spacer_image_1" style="background-image: url('back&logo/res_install.jpeg')">
+			<h1 class = "image_header_1">Areas We Service</h1>
+			<p class = "under_header_text" >What Makes us Local</p>
+		</div>
+		
+		<section class = "location_main_section">
+			<div class = "main_section" style = "display: flex; flex-direction: row; align-items: center; gap: 5%;">
+				<div class = "makes_us_local">
+					<h1>Why Work With Us Locally</h1>
+					<p>At TDR Electrical Services, LLC, we pride ourselves on providing top-quality electrical services to our local community in St. Joseph, MO. Here are just a few reasons why you should work with our team of experienced and reliable local electricians:</p>
+					<p>1. Professional Expertise: Our team of licensed and insured electricians has the knowledge and expertise to handle any electrical issue, no matter how complex. We stay up to date with the latest codes and regulations to ensure that our work is always safe and up to code.
+					<br>
+					<br>
+					2. Quality Workmanship: We take pride in our work and strive to deliver the highest quality services to each and every one of our clients. From small repairs to major electrical installations, we always approach every project with the same level of professionalism and attention to detail.
+					<br>
+					<br>
+					3. Affordable Prices: We believe that everyone should have access to high-quality electrical services at an affordable price. That's why we offer competitive rates and upfront pricing so that you know exactly what to expect before we begin any work.
+					<br>
+					<br>
+					4. Reliable Service: We understand that electrical issues can be stressful and disruptive to your daily life. That's why we offer prompt and reliable service to minimize any inconvenience to you and your family.</p>
+					<p>When you choose to work with TDR Electrical Services, LLC, you can trust that you are getting the best possible service from a team of experienced and reliable local electricians.</p>
+				</div>
+				<div id="map" style="display: flex; height: 900px; width: 500px;"></div>
+			</div>
+		</section>
+		
+		<button id="back-to-top" class="back-to-top fa fa-long-arrow-up"></button>
+		
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="location_script.js"></script>
+	</body>
+	
+	<footer class="footer">
+		<section class="location">
+			<h2 class="foot_head">Location</h2>
+			<p class="footer_und">St. Joseph, MO<br>
+				<br>
+				<a target = "_blank" href="https://www.google.com/maps/place/TDR+Electrical+Services,+LLC/@39.3922354,-94.6422755,9z/data=!4m5!3m4!1s0x0:0x5fe2fb1c61522abf!8m2!3d39.3922354!4d-94.6422755" style="color: #b3c875">Service Areas:</a><br>
+				Buchanan County, MO<br>
+				St. Joseph, MO<br>
+				Kansas City, MO<br>
+				Savannah, MO<br>
+				Olathe, MO<br>
+				Liberty, MO<br>
+				Greater Nebraska Area</p>
+		</section>
+		<section>
+			<h2 class="foot_head">Hours</h2>
+			<p class="footer_und">
+				<span style="color: #b3c875">Mon - Fri: </span>
+				7AM - 5:30PM
+			</p>
+		</section>
+		<section>
+			<h2 class="foot_head">contact</h2>
+			<p class="footer_und">
+				<span style="color: #b3c875">Phone: </span>
+				816-689-0770
+			</p>
+			<p class="footer_und">Contact Us: <a href="#" style="text-decoration: none; color: #b3c875; text-align: center;">Click Here!</a></p>
+		</section>
+	</footer>
+</html>

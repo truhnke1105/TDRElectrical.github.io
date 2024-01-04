@@ -1,0 +1,39 @@
+.about_us_main {
+	font-family: "Noticia Text",serif;
+}
+
+.about_w_pic_text { 
+	display: flex;
+	padding: 5% 10%;
+}
+
+.about_picture { 
+	padding-top: 20%;
+	height: 80vh;
+}
+
+.about_us_text {
+	font-family: "Noticia Text",serif;
+	text-align: start;
+	padding-left: 5%;
+}
+
+.about_us_text h3 {
+	font-size: 60px;
+}
+
+.about_us_text p {
+	font-size: 120%;
+	width: 70%;
+}
+
+.spacer_image_2 {
+	height: 65vh;
+	width: 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	display: flex;
+	position: relative;
+	filter: brightness(75%);
+}
