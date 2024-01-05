@@ -2,6 +2,7 @@
 	font-family: "Noticia Text",serif;
 }
 
+
 .about_w_pic_text { 
 	display: flex;
 	padding: 5% 10%;
@@ -36,4 +37,48 @@
 	display: flex;
 	position: relative;
 	filter: brightness(75%);
+}
+
+@media (min-width: 1800px) {
+	
+}
+
+@media (min-width: 1201px) {
+
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1000px) {
+
+}
+
+@media (max-width: 800px) {
+	.about_w_pic_text { 
+		flex-direction: column;
+	}
+	
+	.about_picture { 
+		padding-top: 20%;
+		height: 60vh;
+	}
+	
+	.spacer_image_1 {
+		display: none;
+	}
+	
+	.spacer_image_2 { 
+		display: none;
+	}
+}
+
+@media (max-width: 750px) {
+
+}
+
+@media (max-width: 500px) {
+
+}
+
+@media (max-width: 375px) {
+
 }

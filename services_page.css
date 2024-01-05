@@ -38,3 +38,75 @@
 	justify-content: center;
 	align-items: center;
 }
+
+@media (min-width: 1800px) {
+	
+}
+
+@media (max-width: 1350px){
+	.service_pic { 
+		height: 300px;
+	}
+}
+
+@media (max-width: 1201px) {
+	.service_pic { 
+		height: 300px;
+	}
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1000px) {
+	.service_pic { 
+		width: 300px;
+	}
+}
+
+@media (max-width: 800px) {
+	.all_our_services {
+		flex-direction: column;
+		padding: 5% 2%;
+	}
+	
+	.spacer_image_1 {
+		display: none;
+	}
+	
+	.all_our_services div {
+		flex-direction: column;
+		width: 300px;
+	}
+	
+	.service_pic { 
+		width: 300px;
+	}
+	
+	.electric_wiring_service { 
+		
+	}
+
+	.electric_repair_service { 
+		border-top: 5px solid #b3c875;
+	}
+
+	.indust_install_service { 
+		border-top: 5px solid #b3c875;
+	}
+
+	.electric_panel_service { 
+		border-top: 5px solid #b3c875;
+	}
+	
+}
+
+@media (max-width: 750px) {
+
+}
+
+@media (max-width: 500px) {
+
+}
+
+@media (max-width: 375px) {
+
+}

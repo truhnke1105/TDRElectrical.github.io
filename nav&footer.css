@@ -57,21 +57,25 @@ body {
 }
 
 /* Styles for the navigation container */
-header nav {
+.main-nav-box {
 	position: absolute;
     background-color: #1a2534;
-    width: 60%;
-    max-width: 1200px;
+    max-width: 75%;
     margin: 0 auto;
     padding: 15px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 10);
     text-align: center;
     font-family: "Roboto Mono", sans-serif;
     text-transform: uppercase;
-	top: 45%;
+	top: 40%;
 	left: 0;
 	right: 0;
 	z-index: 2;
+}
+
+/* Hidden smaller Navbar for small screens */
+.navbar {
+	display: none;
 }
 
 .nav-box {
@@ -282,41 +286,113 @@ footer {
     background-color: transparent; /* Darker color on hover */
 }
 
-@media (min-width: 1800px) {
+@media screen and (max-width: 1800px) {
 	header nav {
-		top: 40%;
+		width: 60%;
+	}
+}
+
+@media screen and (max-width: 1480px) {
+	.main-nav-box {
+		top: 35%;
+	}
+	header nav {
+		width: 80%
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.main-nav-box {
+		display: none;
 	}
 	
-	.logo img {
-		height: auto;
-		max-width: 15%;
-		padding-bottom: 6%;
+	.navbar {
+		display: flex;
+		background-color: #1a2534;
+		width: 375px;
+		margin: 0 auto;
+		padding: 15px 0;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 10);
+		text-align: center;
+		font-family: "Roboto Mono", sans-serif;
+		text-transform: uppercase;
+		z-index: 2;
+		justify-content: center;
 	}
+
+		/* Styling the hamburger icon */
+	.hamburger {
+		display: flex;
+		flex-direction: column;
+		cursor: pointer;
+	}
+
+	.bar {
+		width: 30px;
+		height: 3px;
+		background-color: #fff;
+		margin: 4px 0;
+	}
+
+		/* Styling the navigation links */
+	.nav-links-2 {
+		width: 335px;
+		display: none;
+		flex-direction: column;
+		position: absolute;
+		margin-top: 45px;
+		background-color: #1a2534;
+		transition: all 0.5s ease-in-out;
+		z-index: 2;
+		list-style: none;
+	}
+	
+	.nav-links-2 li {
+		margin-right: 40px;
+	}
+
+	.nav-links-2 a {
+		text-decoration: none;
+		list-style: none;
+		color: #fff;
+	}
+	
+	.nav-links-2.show {
+		display: flex;
+	}
+
+	nav ul.nav-links-2 a:hover {
+		color: #ff9900; /* Adjust to your desired hover color */
+	}
+
+	/* Show the diamond-shaped popup on hover */
+	nav ul.nav-links-2 a:hover::before {
+		opacity: .5;
+		transform: translateX(-50%) translateY(5px); /* Adjust the vertical position */
+	}
+	
+}
+
+@media screen and (max-width: 1000px) {
+	
 }
 
 /* Media query for larger screens */
-@media (min-width: 1201px) {
-    header nav {
-        width: 80%; /* Adjust the width for larger screens */
-    }
+@media screen and (max-width: 800px) {
+	.logo img {
+		max-width: 35%;
+		padding-bottom: 5%;
+	}
 }
 
 /* Media queries for responsiveness */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        align-items: stretch;
-    }
+@media screen and (max-width: 750px) {
 
-    .header .contact-info,
-    .header .location-time {
-        flex: 0;
-        text-align: center;
-        margin: 20px 0;
-    }
+}
 
-    header nav {
-        width: 40%;
-    }
+@media (max-width: 374px) {
+	.back-to-top{
+		display: none;
+	}
 }
 

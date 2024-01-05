@@ -2,7 +2,8 @@
 	font-family: "Roboto Mono",sans-serif;
     display: flex;
     justify-content: space-between;
-    padding: 5% 300px;
+	align-items: center;
+    padding: 5% 0 0 15%;
 }
 
 .contact-form {
@@ -128,4 +129,10 @@
     text-align: center;
     padding: 5% 10%;
 	width: 50%
+}
+
+@media (max-width: 800px) {
+	.contact_form_split {
+		flex-direction: column;
+	}
 }

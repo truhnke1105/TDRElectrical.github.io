@@ -209,7 +209,7 @@
 }
 
 .install_with_pics {
-	width: 3--50%;
+	width: 350%;
 }
 
 .service_heading {
@@ -245,6 +245,7 @@
 	flex-flow: column;
 	background-color: #51aebd;
 	color: white;
+	margin-bottom: 50px;
 }
 
 .scroll_container h2 { 
@@ -334,4 +335,114 @@
 	.introduction {
 		background: none;
 	}
+	
+	.intro_text {
+		padding: 0 15%;
+	}
+}
+
+@media (max-width: 800px) {
+	.middle_section_pictures_1 {
+		display: none;
+	}
+	
+	.middle_section_pictures_2 {
+		display: none;
+	}
+	
+	.text {
+		font-size: 10vw;
+	}
+}
+
+@media (max-width: 750px) {
+	.max-body-width {
+		max-width: 750px;
+	}
+	
+	.scroll_and_facebook {
+		display: none;
+	}
+	
+	.under_welcome_to_text:before {
+		display: none;
+	}
+	
+}
+
+@media (max-width: 500px) {
+	.middle_section {
+		background: none;
+	}
+	
+	.move_middle_sec {
+		flex-direction: column;
+	}
+	
+	.tdr_story_containter_1 {
+		width: 100%;
+	}
+
+	.tdr_story_containter_2 {
+		width: 100%;
+		transform: translate(0px, 50px);
+	}
+
+	.our_tdr_story {
+		position: relative;
+		background-color: #465365;
+		text-align: start;
+		max-width: 100%;
+		margin-left: 0;
+		padding: 100px 50px;
+		opacity: 90%;
+		float: right;
+	}
+
+	.tdr_story_contact_section {
+		position: relative;
+		background-color: #2e3d52;
+		text-align: start;
+		max-width: 100%;
+		margin-right: 0;
+		padding: 100px 50px;
+		opacity: 90%;
+		float: left;
+	}
+	
+	.install_heading {
+		width: 85%;
+	}
+	
+	.res_pic {
+		width: 60%;
+	}
+	
+	.com_pic {
+		width: 75%;
+	}
+	
+	.indus_pic { 
+		width: 60%;
+	}
+	
+}
+
+@media (max-width: 375px) {
+	.mySlides {
+		max-width: 375px;
+	}
+	
+	.max-body-width {
+		max-width: 375px; 
+	}
+	
+	.middle_section {
+		background: none;
+	}
+	
+	.move_middle_sec {
+		flex-direction: column;
+	}
+
 }

@@ -78,3 +78,9 @@ body {
 .full_gallery_button:hover { 
 	background-color: #ccc4a9;
 }
+
+@media (max-width: 800px) {
+	.spacer_image_1 {
+			display: none;
+		}
+}

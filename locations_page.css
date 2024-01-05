@@ -3,7 +3,18 @@
 }
 
 .main_section { 
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 5%;
 	float: left;
+}
+
+.interactive_map { 
+	display: flex;
+	height: 900px;
+	width: 500px;
+	margin-bottom: 50px;
 }
 
 .makes_us_local { 
@@ -19,4 +30,26 @@
 .makes_us_local p {
 	font-size: 20px;
 	padding-bottom: 5%;
+}
+
+@media (max-width: 800px) {
+	.spacer_image_1 {
+			display: none;
+		}
+}
+
+@media (max-width: 750px) {
+	.location_main_section { 
+		padding: 5% 5%;
+	}
+	
+	.main_section { 
+		diplay: flex;
+		flex-direction: column;
+	}
+	
+	.interactive_map {
+		height: 500px;
+		width: 250px;
+	}
 }

@@ -51,49 +51,40 @@ document.addEventListener('click', function (event) {
     }
 });
 
-const backToTopButton = document.getElementById("back-to-top");
+window.addEventListener("scroll", function(){
+	let pageY= window.pageYOffset;
+	let hotel = document.querySelector(".middle_section");
+	hotel.style.backgroundPosition = `-${pageY * .1}px 0px`;
+})
 
-// Show the button when the user scrolls down 20px from the top of the document
-document.addEventListener("DOMContentLoaded", function () {
-    const scrollToTopButton = document.querySelector(".back-to-top");
+const images = document.querySelectorAll('.image-container img');
+const modal = document.querySelector('.modal');
 
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-            scrollToTopButton.style.display = "block";
-        } else {
-            scrollToTopButton.style.display = "none";
-        }
-    });
-
-    scrollToTopButton.addEventListener("click", () => {
-        scrollToTop(800); // You can adjust the duration here (800 milliseconds)
+images.forEach((image) => {
+    image.addEventListener('click', () => {
+        modal.style.display = 'block';
+        modal.innerHTML = `<span class="close">&times;</span><img src="${image.src}" alt="${image.alt}">`;
     });
 });
 
-function scrollToTop(duration) {
-    const start = window.scrollY;
-    const startTime = performance.now();
-
-    function scroll() {
-        const now = performance.now();
-        const elapsed = now - startTime;
-
-        window.scrollTo(0, easeInOutCubic(elapsed, start, -start, duration));
-
-        if (elapsed < duration) {
-            requestAnimationFrame(scroll);
-        }
+modal.addEventListener('click', (event) => {
+    if (event.target.classList.contains('modal')) {
+        modal.style.display = 'none';
     }
-
-    requestAnimationFrame(scroll);
-}
-
-function easeInOutCubic(t, b, c, d) {
-    if ((t /= d / 2) < 1) return (c / 2) * t * t * t + b;
-    return (c / 2) * ((t -= 2) * t * t + 2) + b;
-}
-
-document.querySelector('.hamburger').addEventListener('click', () => {
-  const navLinks = document.querySelector('.nav-links-2');
-  navLinks.classList.toggle('show');
 });
+
+modal.addEventListener('click', (event) => {
+    if (event.target.classList.contains('close')) {
+        modal.style.display = 'none';
+    }
+});
+
+var map = L.map('map').setView([39.733496, -94.808159], 11);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+	subdomains: 'abcd',
+	maxZoom: 13
+}).addTo(map);
+
+L.marker([39.733496, -94.808159]).addTo(map)
+   .bindPopup('TDR Electrical');

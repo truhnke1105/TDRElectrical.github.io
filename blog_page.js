@@ -91,3 +91,7 @@ function easeInOutCubic(t, b, c, d) {
     return (c / 2) * ((t -= 2) * t * t + 2) + b;
 }
 
+document.querySelector('.hamburger').addEventListener('click', () => {
+  const navLinks = document.querySelector('.nav-links-2');
+  navLinks.classList.toggle('show');
+});
